@@ -9,6 +9,17 @@ export default class ReactNativeScreen extends Component {
                     onPress={() => this.props.navigation.navigate('Basic')}
                     title="Basic Usage"
                 />
+                <Button 
+                    onPress={() => this.props.navigation.navigate('Basic', { transparent: true })}
+                    title="Transparent Container"
+                />
+                <Button 
+                    onPress={() => this.props.navigation.navigate('Basic', { 
+                        bottomHalf: true,
+                        transparent: true
+                        })}
+                    title="Bottom Half"
+                />
             </View>
         );
     }

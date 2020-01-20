@@ -6,6 +6,10 @@ import CustomModal from '../../components/CustomModal';
 export default class BasicScreen extends Component {
     state = { modalVisible: false };
     render() {
+        const { navigation } = this.props;
+        const transparent = navigation.getParam('transparent', false);
+        const bottomHalf = navigation.getParam('bottomHalf', false);
+
         return(
             <View style={styles.mainContainer}>
                 <View style={styles.mainContainer}>
@@ -20,7 +24,8 @@ export default class BasicScreen extends Component {
                     visible={this.state.modalVisible}
                     mode="overFullScreen"
                     boxBackgroundColor="lightyellow"
-                    transparentContainer
+                    transparentContainer={transparent}
+                    bottomHalf={bottomHalf}
                 >
                     <Text>This is an extended modal content to show how far the modal content will wrap the text inside</Text>
                     <Button 
