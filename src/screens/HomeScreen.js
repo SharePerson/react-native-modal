@@ -6,12 +6,13 @@ export default class HomeScreen extends Component {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Button 
-            onPress={() => this.props.navigation.navigate("Basic")}
-            title="Basic Usage"
+            onPress={() => this.props.navigation.navigate("ReactNative")}
+            title="Using React Native"
         />
-        <Text>His new name is: "Ajwaja"</Text>
-        <Text>He loves lots of orange juices</Text>
-        <Text>I want my dad to get me lots of toys</Text>
+        <Button 
+            onPress={() => this.props.navigation.navigate("Plugin")}
+            title="Using react-native-modal Plugin"
+        />
       </View>
     );
   }
