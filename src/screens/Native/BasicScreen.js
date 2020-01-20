@@ -9,6 +9,7 @@ export default class BasicScreen extends Component {
         const { navigation } = this.props;
         const transparent = navigation.getParam('transparent', false);
         const bottomHalf = navigation.getParam('bottomHalf', false);
+        const closeOnClickOutside = navigation.getParam('closeOnClickOutside', false);
 
         return(
             <View style={styles.mainContainer}>
@@ -26,6 +27,11 @@ export default class BasicScreen extends Component {
                     boxBackgroundColor="lightyellow"
                     transparentContainer={transparent}
                     bottomHalf={bottomHalf}
+                    outsideClick={() => {
+                        if(closeOnClickOutside) {
+                            this.setState({ modalVisible: false });
+                        }
+                    }}
                 >
                     <Text>This is an extended modal content to show how far the modal content will wrap the text inside</Text>
                     <Button 

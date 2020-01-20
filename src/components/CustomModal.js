@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { View, Modal, StyleSheet, Dimensions } from 'react-native';
+import { 
+    View, 
+    Modal, 
+    StyleSheet, 
+    Dimensions, 
+    TouchableWithoutFeedback,
+    Alert 
+} from 'react-native';
 
 export default class CustomModal extends Component {
     constructor(props) {
@@ -23,11 +30,17 @@ export default class CustomModal extends Component {
                 visible={this.props.visible}
                 presentationStyle={this.props.mode}
             >
-                <View style={styles.modalWrapper}>
-                    <View style={styles.modalContainer}>
-                        {this.props.children}
+                <TouchableWithoutFeedback
+                    onPress={() => this.props.outsideClick()}
+                >
+                    <View style={styles.mainContainer}>
+                        <View style={styles.modalWrapper}>
+                            <View style={styles.modalContainer}>
+                                {this.props.children}
+                            </View>
+                        </View> 
                     </View>
-                </View>
+                </TouchableWithoutFeedback>
             </Modal>
         );
     }
@@ -41,6 +54,7 @@ class StyleSheetFactory {
         modalHeight
     }) {
         const styles = StyleSheet.create({
+            mainContainer: { flex: 1 },
             modalWrapper: {
                 justifyContent: 'center',
                 alignItems: 'center',

@@ -20,6 +20,14 @@ export default class ReactNativeScreen extends Component {
                         })}
                     title="Bottom Half"
                 />
+                <Button 
+                    onPress={() => this.props.navigation.navigate('Basic', { 
+                        bottomHalf: true,
+                        transparent: true,
+                        closeOnClickOutside: true
+                        })}
+                    title="Close on Click Outside"
+                />
             </View>
         );
     }
