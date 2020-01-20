@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Modal, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 import CustomModal from '../../components/CustomModal';
 
