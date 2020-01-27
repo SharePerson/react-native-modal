@@ -28,6 +28,10 @@ export default class HomeScreen extends Component {
                 })}
             title="Close on Click Outside"
         />
+        <Button 
+            onPress={() => this.props.navigation.navigate('RNM')}
+            title="React Native Modal Plugin"
+        />
       </View>
     );
   }
