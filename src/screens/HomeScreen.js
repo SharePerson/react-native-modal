@@ -30,7 +30,11 @@ export default class HomeScreen extends Component {
         />
         <Button 
             onPress={() => this.props.navigation.navigate('RNM')}
-            title="React Native Modal Plugin"
+            title="Using react-native-modal Plugin"
+        />
+         <Button 
+            onPress={() => this.props.navigation.navigate('RNMS')}
+            title="Using react-native-modals Plugin"
         />
       </View>
     );
