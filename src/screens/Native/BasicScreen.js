@@ -11,7 +11,7 @@ export default class BasicScreen extends Component {
         const bottomHalf = navigation.getParam('bottomHalf', false);
         const closeOnClickOutside = navigation.getParam('closeOnClickOutside', false);
 
-        return(
+        return(  
             <View style={styles.mainContainer}>
                 <View style={styles.mainContainer}>
                     <Text>Click the button to show modal: </Text>
