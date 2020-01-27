@@ -4,8 +4,7 @@ import {
     Modal, 
     StyleSheet, 
     Dimensions, 
-    TouchableWithoutFeedback,
-    Alert 
+    TouchableWithoutFeedback 
 } from 'react-native';
 
 export default class CustomModal extends Component {
